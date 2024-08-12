@@ -7,3 +7,6 @@ class Comment(models.Model):
     usr = models.CharField("ユーザ", max_length=255)
     start = models.DateField("開始")
     end = models.DateField("終了")
+    
+    def __str__(self):
+        return self.name
