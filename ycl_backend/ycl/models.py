@@ -1,12 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Comment(models.Model):
-    channelId = models.CharField("チャンネルID", max_length=255)
-    msg = models.CharField("メッセージ", max_length=255)
-    usr = models.CharField("ユーザ", max_length=255)
-    start = models.DateField("開始")
-    end = models.DateField("終了")
-    
-    def __str__(self):
-        return self.name
+class Clip(models.Model):
+    start = models.CharField("開始", max_length=255)
+    end = models.CharField("終了", max_length=255)
